@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="6dp"
+    android:paddingLeft="5dp"
+    android:paddingTop="6dp">
+
+    <!-- 歌曲列表item适配器 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_albumArt"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_empty_music2"
+            android:layout_alignParentLeft="true"
+            android:padding="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/iv_albumArt"
+            android:layout_toLeftOf="@id/visualizer"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_song_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#00ffff"
+                android:textSize="16sp"
+                android:text="转动命运之轮"/>
+
+            <TextView
+                android:id="@+id/tv_song_artist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingTop="3dp"
+                android:singleLine="true"
+                android:textColor="#9900ff"
+                android:textSize="13sp"
+                android:text="ZARD(坂井泉水)"/>
+
+
+        </LinearLayout>
+
+        <!-- 音乐播放  律动 -->
+        <com.sgj.john.mytimber.widgets.MusicVisualizer
+            android:id="@+id/visualizer"
+            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_popup_menu"
+            >
+
+        </com.sgj.john.mytimber.widgets.MusicVisualizer>
+        <ImageView
+            android:id="@+id/iv_popup_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginRight="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foregroundTint="#434343"
+            android:theme="@style/Theme.AppCompat"
+            android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
